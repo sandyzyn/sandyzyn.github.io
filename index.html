@@ -117,6 +117,21 @@
         .resume-link a:hover {
             background-color: #555;
         }
+
+        .project {
+            background-color: #f9f9f9; 
+            padding: 1rem; 
+            margin-bottom: 1.5rem; 
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+        }
+
+        .project h3 {
+            margin-bottom: 0.5rem; 
+            color: #333;
+        }
+        
     </style>
 </head>
 <body>
@@ -127,7 +142,6 @@
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -162,11 +176,27 @@
         <!-- Projects Section -->
         <section id="projects">
             <h2>My Projects</h2>
-            <p>Here are a few projects I'm working/worked on:</p>
-            <ul>
-                <li><strong>Project 1:</strong> Pantry 2 Plate</li>
-                <li><strong>Project 2:</strong> GearMatch</li>
-            </ul>
+
+            <!-- Project 1: Pantry 2 Plate -->
+            <div class="project">
+                <h3>Pantry 2 Plate</h3>
+                <p>
+                    Pantry 2 Plate is a recipe recommendation website with a database of 6000+ recipes sourced from BBCGoodFoods. 
+                    Users can input their pantry ingredients to find recipes they can make, filtered by difficulty level, cooking time, 
+                    and dietary preferences (e.g., vegan, keto). Users can also save recipes, track completed dishes, and search recipes 
+                    using keywords.
+                </p>
+            </div>
+
+            <!-- Project 2: GearMatch -->
+            <div class="project">
+                <h3>GearMatch</h3>
+                <p>
+                    GearMatch is an app and website for car enthusiasts and mechanics. The platform allows users to find mechanics 
+                    based on location and ratings, receive notifications for car meets, and participate in a vibrant automotive forum 
+                    for advice, events, and networking.
+                </p>
+            </div>
         </section>
 
         <!-- Contact Section -->
