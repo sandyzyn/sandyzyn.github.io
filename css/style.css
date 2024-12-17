@@ -91,6 +91,19 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .about-image img {
+        width: 80%; 
+        margin: 0 auto; 
+        display: block;
+    }
+}
+
 .resume-link {
     text-align: center;
     margin-top: 1rem;
