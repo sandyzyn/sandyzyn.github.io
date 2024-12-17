@@ -111,6 +111,17 @@ p {
     background-color: #555;
 }
 
+.skills-list {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+    list-style-type: disc;
+    line-height: 1.6;
+}
+
+.skills-list li {
+    margin-bottom: 0.5rem; 
+}
+
 .project {
     background-color: #f9f9f9; 
     padding: 1rem; 
