@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandy Zhang - Personal Website</title>
     <style>
-        /* General Reset */
         * {
             margin: 0;
             padding: 0;
@@ -76,21 +75,29 @@
             margin-bottom: 1rem;
         }
 
-        /* Image Section Styling */
-        .image-section {
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .about-me-text {
+            width: 60%;
+        }
+
+        .about-image {
+            width: 30%;
             text-align: center;
         }
 
-        .image-section img {
-            width: 200px;
-            height: 200px;
+        .about-image img {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            margin-top: 1rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
-        /* Resume Link Styling */
         .resume-link {
             text-align: center;
             margin-top: 1rem;
@@ -128,17 +135,16 @@
     </header>
 
     <div class="container">
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Sandy Zhang is a third-year student at Princeton University, majoring in Computer Science with minors in Finance and Robotics. Sandy has a strong passion for web development and enjoys creating user-friendly applications.</p>
-            <p>Sandy’s interests extend to the intersection of robotics and artificial intelligence, where technology meets innovation to address real-world challenges. In addition to her technical pursuits, she is also interested in entrepreneurship, exploring how ideas can be transformed into impactful ventures.</p>
-        </section>
-
-        <!-- Image Section -->
-        <section class="image-section">
-            <h2>My Picture</h2>
-            <img src="static/IMG_4097.jpg" alt="Sandy Zhang">
+        <!-- About Me Section -->
+        <section id="about" class = "about-section">
+            <div class = "about-me-text">
+                <h2>About Me</h2>
+                <p>Sandy Zhang is a third-year student at Princeton University, majoring in Computer Science with minors in Finance and Robotics. Sandy has a strong passion for web development and enjoys creating user-friendly applications.</p>
+                <p>Sandy’s interests extend to the intersection of robotics and artificial intelligence, where technology meets innovation to address real-world challenges. In addition to her technical pursuits, she is also interested in entrepreneurship, exploring how ideas can be transformed into impactful ventures.</p>
+            </div>
+            <div class = "about-image"> 
+                <img src="static/IMG_4097.jpg" alt="Sandy Zhang">
+            </div>
         </section>
 
         <!-- Education Section -->
