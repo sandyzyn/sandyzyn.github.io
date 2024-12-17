@@ -76,6 +76,40 @@
             margin-bottom: 1rem;
         }
 
+        /* Image Section Styling */
+        .image-section {
+            text-align: center;
+        }
+
+        .image-section img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Resume Link Styling */
+        .resume-link {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .resume-link a {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .resume-link a:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
@@ -85,7 +119,9 @@
         <nav>
             <ul>
                 <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -97,18 +133,40 @@
             <h2>About Me</h2>
             <p>Sandy Zhang is a third-year student at Princeton University, majoring in Computer Science with minors in Finance and Robotics. Sandy has a strong passion for web development and enjoys creating user-friendly applications.</p>
             <p>Sandy’s interests extend to the intersection of robotics and artificial intelligence, where technology meets innovation to address real-world challenges. In addition to her technical pursuits, she is also interested in entrepreneurship, exploring how ideas can be transformed into impactful ventures.</p>
-            <p>With a drive for learning and collaboration, Sandy is seeking opportunities to contribute to projects that combine creativity, technology, and business.</p>
+        </section>
+
+        <!-- Image Section -->
+        <section class="image-section">
+            <h2>My Picture</h2>
+            <img src="static/IMG_4097.jpg" alt="Sandy Zhang">
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Princeton University</strong> - Bachelor of Science in Computer Science (2022 - 2026)</li>
+                <li>Minors: Finance and Robotics</li>
+                <li>Relevant Coursework: Contemporary Logic Design, Algorithms and Data Structure, Reasoning About Computation, Financial Investmnets, Microeconomics with a Mathematical Approach, Econometrics: A Mathematical Approach, Economics and Computation, Introduction to Machine Learning, Advanced Programming Techniques, Principles of Computer System Design, Autonomous fabrication and Robotics</li>
+            </ul>
         </section>
 
         <!-- Projects Section -->
         <section id="projects">
             <h2>My Projects</h2>
-            <p>Here are a few projects I've worked on:</p>
+            <p>Here are a few projects I'm working/worked on:</p>
             <ul>
-                <li><strong>Project 1:</strong> [Brief description or link]</li>
-                <li><strong>Project 2:</strong> [Brief description or link]</li>
-                <li><strong>Project 3:</strong> [Brief description or link]</li>
+                <li><strong>Project 1:</strong> Pantry 2 Plate</li>
+                <li><strong>Project 2:</strong> GearMatch</li>
             </ul>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume">
+            <h2>Resume</h2>
+            <div class="resume-link">
+                <a href="pdfs/Zhang, Sandy.pdf" target="_blank">View My Resume</a>
+            </div>
         </section>
 
         <!-- Contact Section -->
@@ -116,7 +174,7 @@
             <h2>Contact Me</h2>
             <p>Feel free to reach out to me through the following channels:</p>
             <ul>
-                <li>Email: <a href="sandyzhang.zyn@gmail.com">sandyzhang.zyn@gmail.com</a></li>
+                <li>Email: <a href="mailto:sandyzhang.zyn@gmail.com">sandyzhang.zyn@gmail.com</a></li>
                 <li>LinkedIn: <a href="https://www.linkedin.com/in/sandy-zhang-zyn/" target="_blank">sandy-zhang-zyn</a></li>
             </ul>
         </section>
