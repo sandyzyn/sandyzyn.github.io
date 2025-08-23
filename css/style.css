@@ -191,6 +191,7 @@ p {
     margin-top: 1.5rem;
     padding-left: 0;
     list-style-type: none;
+    display: block;
 }
 
 .skills-list li {
@@ -200,6 +201,8 @@ p {
     border-radius: 6px;
     border-left: 3px solid #6c757d;
     transition: all 0.2s ease;
+    display: block;
+    width: 100%;
 }
 
 .skills-list li:hover {
