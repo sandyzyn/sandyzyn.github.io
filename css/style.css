@@ -219,20 +219,21 @@ p {
 
 .resume-link a {
     display: inline-block;
-    background: #495057;
-    color: white;
+    background: transparent;
+    color: #495057;
     padding: 0.8rem 1.5rem;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border: 1px solid #6c757d;
 }
 
 .resume-link a:hover {
-    background: #343a40;
+    background: #6c757d;
+    color: white;
     transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 /* Education Section */
