@@ -196,17 +196,18 @@ p {
 
 .skills-list li {
     margin-bottom: 0.8rem;
-    padding: 0.8rem 1.2rem;
-    background: #f8f9fa;
-    border-radius: 6px;
-    border-left: 3px solid #6c757d;
+    padding: 0.3rem 0;
+    color: #6c757d;
     transition: all 0.2s ease;
     display: block;
     width: 100%;
+    border-left: 2px solid #dee2e6;
+    padding-left: 1rem;
 }
 
 .skills-list li:hover {
-    background: #e9ecef;
+    color: #495057;
+    border-left-color: #6c757d;
     transform: translateX(3px);
 }
 
