@@ -4,60 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Sandy Zhang - Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Sandy Zhang - Portfolio</title>
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
     <header>
         <div class="header-content">
-            <h1>Sandy Zhang</h1>
-            <h3 class="header-subtitle">Computer Science Student & Developer</h3>
+            <div class="logo">
+                <span class="logo-text">SZ</span>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#posters">Posters</a></li>
+                    <li><a href="#posters">Research</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting">Hi, I'm</span>
+                    <span class="name">Sandy Zhang</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="typing-text">Computer Science Student</span>
+                    <span class="cursor">|</span>
+                </p>
+                <p class="hero-description">
+                    Building the future, one line of code at a time. Passionate about web development, 
+                    blockchain technology, and the intersection of AI & robotics.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="pdfs/Zhang__Sandy.pdf" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-file-pdf"></i> Resume
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="mailto:sandyzhang.zyn@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sandy-zhang-zyn/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/sandyzyn" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="static/IMG_4097.jpg" alt="Sandy Zhang">
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
     <div class="container">
         <!-- About Me Section -->
         <section id="about" class="about-section">
-            <div class="about-me-text">
+            <div class="section-header">
+                <span class="section-number">01</span>
                 <h2>About Me</h2>
-                <p>Sandy Zhang is a rising senior at Princeton University, majoring in Computer Science with minors in Finance and Robotics. Sandy has an interest in web development and enjoys creating user-friendly applications.</p>
-                <p>Sandy's interests extend to the intersection of robotics and artificial intelligence, where technology meets innovation to address real-world challenges. In addition to her technical pursuits, she is also interested in entrepreneurship and design, exploring how ideas can be transformed into impactful ventures.</p>
-                <h3>Technical Skills</h3>
-                <ul class="skills-list">
-                    <li><strong>Programming:</strong> Java, C, Python, HTML/CSS, JavaScript, SQL, Go, Solidity</li>
-                    <li><strong>Tools & Frameworks:</strong> GitHub, VSCode, IntelliJ, Flask, MongoDB, Selenium, MySQL, React, Computer-Aided Design, Excel, Sigma, Figma, Cursor</li>
-                    <li><strong>Soft Skills:</strong> Teamwork, Communication, Leadership</li>
-                    <li><strong>Languages:</strong> Chinese (fluent), English (fluent)</li>
-                </ul>
-                <div class="resume-link">
-                    <a href="pdfs/Zhang__Sandy.pdf" target="_blank">View My Resume</a>
-                </div>
+                <div class="section-line"></div>
             </div>
-            <div class="about-image"> 
-                <img src="static/IMG_4097.jpg" alt="Sandy Zhang">
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="intro-text">
+                        I'm a <span class="highlight">rising senior at Princeton University</span>, majoring in Computer Science 
+                        with minors in Finance and Robotics. I love creating beautiful, user-friendly applications that make a difference.
+                    </p>
+                    <p>
+                        My interests lie at the intersection of <span class="highlight">robotics and artificial intelligence</span>, 
+                        where technology meets innovation to address real-world challenges. Beyond coding, I'm passionate about 
+                        <span class="highlight">entrepreneurship and design</span>, exploring how ideas can be transformed into impactful ventures.
+                    </p>
+                </div>
+                <div class="skills-container">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <h4>Programming</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">C</span>
+                                <span class="skill-tag">Go</span>
+                                <span class="skill-tag">Solidity</span>
+                                <span class="skill-tag">SQL</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                            <h4>Tools & Frameworks</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Flask</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">Figma</span>
+                                <span class="skill-tag">GitHub</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <div class="skill-icon"><i class="fas fa-globe"></i></div>
+                            <h4>Languages</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">English (Fluent)</span>
+                                <span class="skill-tag">Chinese (Fluent)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Education Section -->
         <section id="education" class="education">
-            <h2>Education</h2>
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2>Education</h2>
+                <div class="section-line"></div>
+            </div>
             <div class="education-content">
-                <div class="education-item">
-                    <h3>Princeton University</h3>
-                    <p class="degree">Bachelor of Science in Engineering in Computer Science (2022 - 2026)</p>
-                    <p class="minors">Minors: Finance</p>
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-info">
+                            <h3>Princeton University</h3>
+                            <p class="degree">Bachelor of Science in Engineering</p>
+                            <p class="major">Computer Science</p>
+                            <p class="timeline">2022 - 2026</p>
+                        </div>
+                    </div>
+                    <div class="minors-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Minors: Finance</span>
+                    </div>
                     <div class="coursework">
-                        <h4>Relevant Coursework:</h4>
-                        <p>Algorithms and Data Structure, Contemporary Logic Design, Reasoning About Computation, Financial Investments, Microeconomics with a Mathematical Approach, Econometrics: A Mathematical Approach, Economics and Computation, Introduction to Machine Learning, Advanced Programming Techniques, Principles of Computer System Design, Autonomous Fabrication and Robotics, Venture Capital & Innovative Finance, Decentralized Finance, Computational Biology</p>
+                        <h4><i class="fas fa-book-open"></i> Relevant Coursework</h4>
+                        <div class="coursework-tags">
+                            <span class="course-tag">Algorithms & Data Structures</span>
+                            <span class="course-tag">Machine Learning</span>
+                            <span class="course-tag">Computer Systems</span>
+                            <span class="course-tag">Robotics</span>
+                            <span class="course-tag">Decentralized Finance</span>
+                            <span class="course-tag">Venture Capital</span>
+                            <span class="course-tag">Computational Biology</span>
+                            <span class="course-tag">Economics & Computation</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -65,64 +180,100 @@
 
         <!-- Projects Section -->
         <section id="projects">
-            <h2>My Projects</h2>
-
-            <!-- Web Development Projects -->
-            <div class="project-category">
-                <h3 class="category-title">🌐 Web Development</h3>
-                <div class="projects-grid">
-                    <!-- Project 1: Orange & BlackJack -->
-                    <div class="project">
-                        <h4>Orange & Blackjack</h4>
-                        <p class="project-date">March 2025 - May 2025</p>
-                        <p class="project-description">
-                            Orange & BlackJack is a decentralized version of the classic game Blackjack, but instead of normal money, players can place 
-                            bets using LUSD (Test Net currency). The game itself uses a standard deck of 52 cards with no jokers. The entire game 
-                            will run via smart contracts deployed on the blockchain which ensures fairness and transparency, since anyone can see the code. 
-                            Overall, this removes the intermediary of the casino, meaning that the experience is built in trust and allows the player to 
-                            get a more straightforward path to profit and fun.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://orangeblackjack.netlify.app" target="_blank">View the Website</a>
-                            <a href="https://github.com/sandyzyn/orange-blackjack" target="_blank">View on GitHub</a>
-                        </div>
-                    </div>
-
-                    <!-- Project 2: Pantry 2 Plate -->
-                    <div class="project">
-                        <h4>Pantry 2 Plate</h4>
-                        <p class="project-date">September 2024 - December 2024</p>
-                        <p class="project-description">
-                            Pantry 2 Plate is a recipe recommendation website with a database of 6000+ recipes sourced from BBCGoodFoods. 
-                            Users can input their pantry ingredients to find recipes they can make, filtered by difficulty level, cooking time, 
-                            and dietary preferences (e.g., vegan, keto). Users can also save recipes, track completed dishes, and search recipes 
-                            using keywords.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://pantry-2-plate.onrender.com" target="_blank">View the Website</a>
-                            <a href="https://github.com/kaylaxu15/pantry_2_plate" target="_blank">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2>Featured Projects</h2>
+                <div class="section-line"></div>
             </div>
 
-            <!-- Mobile App Projects -->
-            <div class="project-category">
-                <h3 class="category-title">📱 Mobile Applications</h3>
-                <div class="projects-grid">
-                    <!-- Project 3: IC Mobile App -->
-                    <div class="project">
-                        <h4>IC Mobile App</h4>
-                        <p class="project-date">February 2025 - Present</p>
-                        <p class="project-description">
-                            The Business Today Conference App is a mobile application designed to streamline logistics and enhance the 
-                            experience for both staffers and attendees at Business Today's future conferences. The app provides each user with a 
-                            personalized schedule. It also includes a comprehensive FAQ section to quickly address common questions, a real-time help form for 
-                            assistance, and a venue map to help users navigate the conference efficiently. Additionally, the app
-                            supports live notifications to keep users informed about any changes, announcements, and important updates. By 
-                            centralizing everything onto one platform, we hope to reduce operational friction, improve communication, and create a more 
-                            seamless and engaging conference experience.
-                        </p>     
+            <div class="projects-grid">
+                <!-- Project 1: Orange & BlackJack -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-dice"></i>
+                        </div>
+                        <div class="project-category-badge web">Web</div>
+                    </div>
+                    <h3>Orange & Blackjack</h3>
+                    <p class="project-date">
+                        <i class="far fa-calendar"></i> March 2025 - May 2025
+                    </p>
+                    <p class="project-description">
+                        A decentralized version of Blackjack running on blockchain smart contracts. Players can bet using LUSD (Test Net currency) 
+                        with complete transparency and fairness. The game removes casino intermediaries, creating a trustless gaming experience.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Blockchain</span>
+                        <span class="tech-tag">Solidity</span>
+                        <span class="tech-tag">Web3</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://orangeblackjack.netlify.app" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/sandyzyn/orange-blackjack" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Pantry 2 Plate -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="project-category-badge web">Web</div>
+                    </div>
+                    <h3>Pantry 2 Plate</h3>
+                    <p class="project-date">
+                        <i class="far fa-calendar"></i> September 2024 - December 2024
+                    </p>
+                    <p class="project-description">
+                        A recipe recommendation platform with 6000+ recipes. Users input pantry ingredients to discover recipes filtered by difficulty, 
+                        cooking time, and dietary preferences. Features recipe saving and tracking.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://pantry-2-plate.onrender.com" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/kaylaxu15/pantry_2_plate" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: IC Mobile App -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-category-badge mobile">Mobile</div>
+                    </div>
+                    <h3>Business Today Conference App</h3>
+                    <p class="project-date">
+                        <i class="far fa-calendar"></i> February 2025 - Present
+                    </p>
+                    <p class="project-description">
+                        A mobile application streamlining conference logistics with personalized schedules, FAQ sections, real-time help forms, 
+                        venue maps, and live notifications for seamless conference experiences.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Mobile</span>
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Real-time</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link coming-soon">
+                            <i class="fas fa-clock"></i> Coming Soon
+                        </span>
                     </div>
                 </div>
             </div>
@@ -130,59 +281,74 @@
 
         <!-- Poster Projects Section -->
         <section id="posters">
-            <h2>Research Posters & Papers</h2>
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2>Research & Publications</h2>
+                <div class="section-line"></div>
+            </div>
             <div class="posters-grid">
 
-                <div class="poster-item">
+                <div class="poster-card">
                     <div class="poster-preview">
-                        <div class="poster-image-placeholder">
-                            <span class="poster-icon">🃏</span>
-                            <p>ECE473 Conference</p>
+                        <div class="poster-icon-wrapper">
+                            <i class="fas fa-dice"></i>
                         </div>
                     </div>
                     <div class="poster-content">
-                        <h3>ECE473 Poster</h3>
-                        <p class="poster-date">Spring, 2025</p>
-                        <p class="poster-description">Conference poster for ECE473, showcasing a decentralized on-chain implementation of blackjack that delivers a transparent and simple gaming experience.</p>
-                        <div class="poster-links">
-                            <a href="projects/ECE473_ConferencePoster.pdf" target="_blank">View Poster</a>
-                        </div>
+                        <h3>ECE473 Conference Poster</h3>
+                        <p class="poster-date">
+                            <i class="far fa-calendar"></i> Spring 2025
+                        </p>
+                        <p class="poster-description">Decentralized on-chain implementation of blackjack delivering a transparent and trustless gaming experience.</p>
+                        <a href="projects/ECE473_ConferencePoster.pdf" target="_blank" class="poster-link">
+                            <i class="fas fa-file-pdf"></i> View Poster
+                        </a>
                     </div>
                 </div>
 
-                <div class="poster-item">
+                <div class="poster-card">
                     <div class="poster-preview">
-                        <div class="poster-image-placeholder">
-                            <span class="poster-icon">🐝</span>
-                            <p>CRISPR Research</p>
+                        <div class="poster-icon-wrapper">
+                            <i class="fas fa-dna"></i>
                         </div>
                     </div>
                     <div class="poster-content">
-                        <h3>Comparative Analysis of gRNA Design Software Tools for CRISPR Application on orco in Honey Bees</h3>
-                        <p class="poster-date">Fall, 2024</p>
-                        <p class="poster-description">Final research paper analyzing various gRNA design software tools and their effectiveness for CRISPR applications targeting the orco gene in honey bees.</p>
-                        <div class="poster-links">
-                            <a href="projects/written_final_report.pdf" target="_blank">View Research Paper</a>
-                        </div>
+                        <h3>CRISPR gRNA Design Analysis</h3>
+                        <p class="poster-date">
+                            <i class="far fa-calendar"></i> Fall 2024
+                        </p>
+                        <p class="poster-description">Comparative analysis of gRNA design software tools for CRISPR applications targeting the orco gene in honey bees.</p>
+                        <a href="projects/written_final_report.pdf" target="_blank" class="poster-link">
+                            <i class="fas fa-file-pdf"></i> View Paper
+                        </a>
                     </div>
                 </div>
 
-                <div class="poster-item">
+                <div class="poster-card">
                     <div class="poster-preview">
-                        <div class="poster-image-placeholder">
-                            <span class="poster-icon">🔬</span>
-                            <p>Beta-Lactamase Research</p>
+                        <div class="poster-icon-wrapper">
+                            <i class="fas fa-flask"></i>
                         </div>
                     </div>
                     <div class="poster-content">
-                        <h3>Beta-Lactamase Research Project</h3>
-                        <p class="poster-date">2021-2022</p>
-                        <p class="poster-description">Comprehensive research on Beta-Lactamase enzyme studies and antibiotic resistance mechanisms, presented at multiple conferences.</p>
-                        <div class="poster-links">
-                            <a href="projects/Chomet_Zhang_Sandy.pptx.pdf" target="_blank">Independent Research </a>
-                            <a href="projects/Beta-Lactamase-Poster-10-11-21.pdf" target="_blank">EMBL Conference</a>
-                            <a href="projects/SheuliPoster-3-22.pdf" target="_blank">Texas ASM Conference Pt 1 </a>
-                            <a href="projects/Texas-ASM-Poster-final-11-3a-21.pdf" target="_blank">Texas ASM Conference Pt 2</a>
+                        <h3>Beta-Lactamase Research</h3>
+                        <p class="poster-date">
+                            <i class="far fa-calendar"></i> 2021-2022
+                        </p>
+                        <p class="poster-description">Comprehensive research on Beta-Lactamase enzyme studies and antibiotic resistance mechanisms.</p>
+                        <div class="poster-links-multiple">
+                            <a href="projects/Chomet_Zhang_Sandy.pptx.pdf" target="_blank" class="poster-link-small">
+                                <i class="fas fa-file-pdf"></i> Research
+                            </a>
+                            <a href="projects/Beta-Lactamase-Poster-10-11-21.pdf" target="_blank" class="poster-link-small">
+                                <i class="fas fa-file-pdf"></i> EMBL
+                            </a>
+                            <a href="projects/SheuliPoster-3-22.pdf" target="_blank" class="poster-link-small">
+                                <i class="fas fa-file-pdf"></i> ASM Pt 1
+                            </a>
+                            <a href="projects/Texas-ASM-Poster-final-11-3a-21.pdf" target="_blank" class="poster-link-small">
+                                <i class="fas fa-file-pdf"></i> ASM Pt 2
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -191,21 +357,48 @@
 
         <!-- Contact Section -->
         <section id="contact">
-            <h2>Contact Me</h2>
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2>Let's Connect</h2>
+                <div class="section-line"></div>
+            </div>
             <div class="contact-content">
-                <p>Feel free to reach out to me through the following:</p>
-                <div class="contact-links">
-                    <a href="mailto:sandyzhang.zyn@gmail.com" class="contact-link">
-                        <span class="contact-icon">📧</span>
-                        <span>sandyzhang.zyn@gmail.com</span>
+                <p class="contact-intro">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                </p>
+                <div class="contact-cards">
+                    <a href="mailto:sandyzhang.zyn@gmail.com" class="contact-card">
+                        <div class="contact-card-icon email">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>sandyzhang.zyn@gmail.com</p>
+                        <span class="contact-cta">Send a message <i class="fas fa-arrow-right"></i></span>
                     </a>
-                    <a href="https://www.linkedin.com/in/sandy-zhang-zyn/" target="_blank" class="contact-link">
-                        <span class="contact-icon">💼</span>
-                        <span>LinkedIn: sandy-zhang-zyn</span>
+                    <a href="https://www.linkedin.com/in/sandy-zhang-zyn/" target="_blank" class="contact-card">
+                        <div class="contact-card-icon linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>sandy-zhang-zyn</p>
+                        <span class="contact-cta">Connect with me <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                    <a href="https://github.com/sandyzyn" target="_blank" class="contact-card">
+                        <div class="contact-card-icon github">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>sandyzyn</p>
+                        <span class="contact-cta">View my code <i class="fas fa-arrow-right"></i></span>
                     </a>
                 </div>
             </div>
         </section>
     </div>
+
+    <footer>
+        <p>Designed & Built by Sandy Zhang <span class="heart">❤️</span></p>
+        <p class="footer-year">© 2025</p>
+    </footer>
 </body>
 </html>
