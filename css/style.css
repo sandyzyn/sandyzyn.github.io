@@ -344,6 +344,7 @@ nav a:hover::after {
 
 .hero-title {
     margin-bottom: 1.5rem;
+    overflow: visible;
 }
 
 .greeting {
@@ -366,9 +367,11 @@ nav a:hover::after {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    line-height: 1.05;
+    line-height: 1.15;
     letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
+    overflow: visible;
 }
 
 .hero-subtitle {
@@ -497,6 +500,8 @@ nav a:hover::after {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 2;
+    background: transparent;
+    mix-blend-mode: normal;
 }
 
 .image-glow {
