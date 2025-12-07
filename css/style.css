@@ -55,6 +55,7 @@ body {
     50% { background-position: 100% 50%; }
 }
 
+
 /* Header */
 header {
     position: fixed;
@@ -129,6 +130,168 @@ nav a:hover::after {
     max-width: 1200px;
     margin: 0 auto;
     padding-top: 120px;
+    background: linear-gradient(180deg, rgba(96, 165, 250, 0.1) 0%, rgba(59, 130, 246, 0.05) 50%, transparent 100%);
+    background-size: 100% 100%;
+    animation: gradientFade 8s ease-in-out infinite;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.15) 0%, rgba(37, 99, 235, 0.1) 50%, rgba(30, 64, 175, 0.05) 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* Hero Particles Animation */
+.hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.3), rgba(37, 99, 235, 0.2));
+    filter: blur(30px);
+    opacity: 0.4;
+}
+
+.particle-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 10%;
+    animation: float1 15s ease-in-out infinite;
+}
+
+.particle-2 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    right: 15%;
+    animation: float2 18s ease-in-out infinite;
+}
+
+.particle-3 {
+    width: 180px;
+    height: 180px;
+    bottom: 20%;
+    left: 20%;
+    animation: float3 20s ease-in-out infinite;
+}
+
+.particle-4 {
+    width: 120px;
+    height: 120px;
+    top: 30%;
+    right: 30%;
+    animation: float4 16s ease-in-out infinite;
+}
+
+.particle-5 {
+    width: 100px;
+    height: 100px;
+    bottom: 30%;
+    right: 10%;
+    animation: float5 14s ease-in-out infinite;
+}
+
+@keyframes float1 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.4;
+    }
+    33% {
+        transform: translate(50px, -80px) scale(1.2);
+        opacity: 0.6;
+    }
+    66% {
+        transform: translate(-30px, 60px) scale(0.8);
+        opacity: 0.3;
+    }
+}
+
+@keyframes float2 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.4;
+    }
+    33% {
+        transform: translate(-60px, 50px) scale(1.1);
+        opacity: 0.5;
+    }
+    66% {
+        transform: translate(40px, -70px) scale(0.9);
+        opacity: 0.3;
+    }
+}
+
+@keyframes float3 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.4;
+    }
+    33% {
+        transform: translate(70px, -50px) scale(1.15);
+        opacity: 0.6;
+    }
+    66% {
+        transform: translate(-50px, 80px) scale(0.85);
+        opacity: 0.3;
+    }
+}
+
+@keyframes float4 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.4;
+    }
+    33% {
+        transform: translate(-40px, 60px) scale(1.05);
+        opacity: 0.5;
+    }
+    66% {
+        transform: translate(50px, -40px) scale(0.95);
+        opacity: 0.3;
+    }
+}
+
+@keyframes float5 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.4;
+    }
+    33% {
+        transform: translate(30px, 50px) scale(1.1);
+        opacity: 0.5;
+    }
+    66% {
+        transform: translate(-40px, 60px) scale(0.9);
+        opacity: 0.3;
+    }
+}
+
+@keyframes gradientFade {
+    0%, 100% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
 }
 
 .hero-content {
@@ -137,10 +300,42 @@ nav a:hover::after {
     gap: 4rem;
     align-items: center;
     width: 100%;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-text {
     animation: fadeInUp 0.8s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text > * {
+    animation: fadeInUp 0.8s ease backwards;
+}
+
+.hero-text .greeting {
+    animation-delay: 0.1s;
+}
+
+.hero-text .name {
+    animation-delay: 0.2s;
+}
+
+.hero-text .hero-subtitle {
+    animation-delay: 0.3s;
+}
+
+.hero-text .hero-description {
+    animation-delay: 0.4s;
+}
+
+.hero-text .hero-buttons {
+    animation-delay: 0.5s;
+}
+
+.hero-text .social-links {
+    animation-delay: 0.6s;
 }
 
 .hero-title {
@@ -269,7 +464,9 @@ nav a:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeInRight 0.8s ease;
+    animation: fadeInRight 1s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .image-wrapper {
@@ -569,7 +766,7 @@ section {
     padding: 0.8rem 1.5rem;
     background: var(--bg-light);
     border-radius: 12px;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     color: var(--text-dark);
     font-weight: 500;
 }
@@ -627,7 +824,7 @@ section {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 0;
 }
@@ -1077,7 +1274,10 @@ footer {
         font-size: 3rem;
     }
 
-    .projects-grid,
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     .posters-grid {
         grid-template-columns: 1fr;
     }
@@ -1103,6 +1303,10 @@ footer {
         padding-top: 100px;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
     .section-header h2 {
