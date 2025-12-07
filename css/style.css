@@ -127,27 +127,29 @@ nav a:hover::after {
     justify-content: center;
     padding: 8rem 2rem 4rem;
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
     padding-top: 120px;
-    background: linear-gradient(180deg, rgba(96, 165, 250, 0.1) 0%, rgba(59, 130, 246, 0.05) 50%, transparent 100%);
-    background-size: 100% 100%;
+    background: linear-gradient(180deg, rgba(96, 165, 250, 0.12) 0%, rgba(59, 130, 246, 0.08) 30%, rgba(37, 99, 235, 0.05) 60%, transparent 100%);
+    background-size: 100% 100vh;
+    background-attachment: fixed;
     animation: gradientFade 8s ease-in-out infinite;
     overflow: hidden;
 }
 
 .hero::before {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(96, 165, 250, 0.15) 0%, rgba(37, 99, 235, 0.1) 50%, rgba(30, 64, 175, 0.05) 100%);
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.18) 0%, rgba(37, 99, 235, 0.12) 50%, rgba(30, 64, 175, 0.06) 100%);
     background-size: 200% 200%;
     animation: gradientShift 10s ease infinite;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 /* Hero Particles Animation */
@@ -300,6 +302,8 @@ nav a:hover::after {
     gap: 4rem;
     align-items: center;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     position: relative;
     z-index: 2;
 }
