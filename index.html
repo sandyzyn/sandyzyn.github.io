@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Sandy Zhang - Portfolio</title>
+    <title>Sandy Zhang</title>
 </head>
 <body>
-    <!-- Background -->
-    <div class="animated-bg"></div>
-    
+    <!-- Grain overlay -->
+    <div class="grain"></div>
+
+    <!-- Navigation -->
     <header>
         <div class="header-content">
+            <a href="#" class="logo">SZ</a>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
@@ -23,89 +25,79 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <a href="pdfs/Zhang__Sandy.pdf" target="_blank" class="nav-resume">Resume</a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-particles">
-            <div class="particle particle-1"></div>
-            <div class="particle particle-2"></div>
-            <div class="particle particle-3"></div>
-            <div class="particle particle-4"></div>
-            <div class="particle particle-5"></div>
-        </div>
+        <div class="hero-accent-line"></div>
         <div class="hero-content">
             <div class="hero-text">
+                <p class="hero-eyebrow">Princeton University &mdash; Class of 2026</p>
                 <h1 class="hero-title">
-                    <span class="greeting">Hi, I'm</span>
-                    <span class="name">Sandy Zhang</span>
+                    <span class="title-line">Sandy</span>
+                    <span class="title-line title-line--outline">Zhang</span>
                 </h1>
-                <p class="hero-subtitle">
-                    <span class="typing-text">Computer Science Student</span>
-                    <span class="cursor">|</span>
-                </p>
+                <div class="hero-role">
+                    <span class="role-line"></span>
+                    <p>Computer Science &amp; Finance</p>
+                </div>
                 <p class="hero-description">
-                    Building the future, one line of code at a time. Passionate about web development, 
-                    decentralized applications, and artificial intelligence.
+                    Building at the intersection of AI, decentralized systems, and design.
+                    Turning ambitious ideas into elegant code.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="pdfs/Zhang__Sandy.pdf" target="_blank" class="btn btn-secondary">
-                        <i class="fas fa-file-pdf"></i> Resume
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Work</span>
+                        <i class="fas fa-arrow-down"></i>
                     </a>
-                </div>
-                <div class="social-links">
-                    <a href="mailto:sandyzhang.zyn@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/sandy-zhang-zyn/" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/sandyzyn" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
+                    <div class="hero-socials">
+                        <a href="mailto:sandyzhang.zyn@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/sandy-zhang-zyn/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/sandyzyn" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="hero-image">
-                <div class="image-wrapper">
+                <div class="image-frame">
                     <img src="static/Screen Shot 2025-02-13 at 11.36.56 AM.png" alt="Sandy Zhang">
-                    <div class="image-glow"></div>
+                    <div class="image-overlay"></div>
                 </div>
+                <div class="image-caption">est. 2022</div>
             </div>
         </div>
         <div class="scroll-indicator">
-            <span>Scroll</span>
-            <i class="fas fa-chevron-down"></i>
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
     <div class="container">
-        
+
         <!-- About Me Section -->
         <section id="about" class="about-section">
             <div class="section-header">
-                <span class="section-number">01</span>
-                <h2>About Me</h2>
-                <div class="section-line"></div>
+                <span class="section-label">01 / About</span>
+                <h2>The<br><em>Story</em></h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="intro-text">
-                        I'm a <span class="highlight"> senior at Princeton University</span>, majoring in Computer Science 
-                        with a minor in Finance. I love creating beautiful, user-friendly applications that make a difference.
+                    <p class="about-lead">
+                        A senior at <strong>Princeton University</strong>, majoring in Computer Science
+                        with a minor in Finance. I create beautiful, user-friendly applications that make a difference.
                     </p>
                     <p>
-                        My interests lie in <span class="highlight">artificial intelligence</span>, 
-                        where technology meets innovation to address real-world challenges. Beyond coding, I'm passionate about 
-                        <span class="highlight">entrepreneurship and design</span>, exploring how ideas can be transformed into impactful ventures.
+                        My interests lie in <strong>artificial intelligence</strong>,
+                        where technology meets innovation to address real-world challenges. Beyond coding, I'm drawn to
+                        <strong>entrepreneurship and design</strong> &mdash; exploring how ideas become impactful ventures.
                     </p>
                 </div>
                 <div class="skills-container">
-                    <h3>Technical Skills</h3>
+                    <h3>Toolkit</h3>
                     <div class="skills-grid">
                         <div class="skill-category">
-                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <span class="skill-number">01</span>
                             <h4>Programming</h4>
                             <div class="skill-tags">
                                 <span class="skill-tag">Java</span>
@@ -118,8 +110,8 @@
                             </div>
                         </div>
                         <div class="skill-category">
-                            <div class="skill-icon"><i class="fas fa-tools"></i></div>
-                            <h4>Tools & Frameworks</h4>
+                            <span class="skill-number">02</span>
+                            <h4>Frameworks & Tools</h4>
                             <div class="skill-tags">
                                 <span class="skill-tag">React</span>
                                 <span class="skill-tag">Flask</span>
@@ -131,7 +123,7 @@
                             </div>
                         </div>
                         <div class="skill-category">
-                            <div class="skill-icon"><i class="fas fa-globe"></i></div>
+                            <span class="skill-number">03</span>
                             <h4>Languages</h4>
                             <div class="skill-tags">
                                 <span class="skill-tag">English (Fluent)</span>
@@ -146,29 +138,25 @@
         <!-- Education Section -->
         <section id="education" class="education">
             <div class="section-header">
-                <span class="section-number">02</span>
-                <h2>Education</h2>
-                <div class="section-line"></div>
+                <span class="section-label">02 / Education</span>
+                <h2>Where I<br><em>Studied</em></h2>
             </div>
             <div class="education-content">
                 <div class="education-card">
-                    <div class="education-header">
-                        <div class="education-icon">
+                    <div class="edu-top">
+                        <div class="edu-badge">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <div class="education-info">
-                            <h3>Princeton University</h3>
-                            <p class="degree">Bachelor of Science in Engineering</p>
-                            <p class="major">Computer Science</p>
-                            <p class="timeline">2022 - 2026</p>
+                        <div class="edu-meta">
+                            <span class="edu-years">2022 &mdash; 2026</span>
+                            <span class="edu-minor"><i class="fas fa-certificate"></i> Minor: Finance</span>
                         </div>
                     </div>
-                    <div class="minors-badge">
-                        <i class="fas fa-certificate"></i>
-                        <span>Minors: Finance</span>
-                    </div>
+                    <h3>Princeton University</h3>
+                    <p class="edu-degree">Bachelor of Science in Engineering</p>
+                    <p class="edu-major">Computer Science</p>
                     <div class="coursework">
-                        <h4><i class="fas fa-book-open"></i> Relevant Coursework</h4>
+                        <h4>Relevant Coursework</h4>
                         <div class="coursework-tags">
                             <span class="course-tag">Algorithms & Data Structures</span>
                             <span class="course-tag">Machine Learning</span>
@@ -187,27 +175,21 @@
         <!-- Projects Section -->
         <section id="projects">
             <div class="section-header">
-                <span class="section-number">03</span>
-                <h2>Featured Projects</h2>
-                <div class="section-line"></div>
+                <span class="section-label">03 / Work</span>
+                <h2>Featured<br><em>Projects</em></h2>
             </div>
 
             <div class="projects-grid">
-                <!-- Project 1: Orange & BlackJack -->
                 <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-dice"></i>
-                        </div>
-                        <div class="project-category-badge web">Web</div>
+                    <div class="project-number">01</div>
+                    <div class="project-meta">
+                        <span class="project-type">Blockchain</span>
+                        <span class="project-date">Mar &mdash; May 2025</span>
                     </div>
                     <h3>Orange & Blackjack</h3>
-                    <p class="project-date">
-                        <i class="far fa-calendar"></i> March 2025 - May 2025
-                    </p>
                     <p class="project-description">
-                        A decentralized version of Blackjack running on blockchain smart contracts. Players can bet using LUSD (Test Net currency) 
-                        with complete transparency and fairness. The game removes casino intermediaries, creating a trustless gaming experience.
+                        A decentralized version of Blackjack running on blockchain smart contracts. Players bet using LUSD
+                        with complete transparency. Removes casino intermediaries for a trustless gaming experience.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Blockchain</span>
@@ -218,29 +200,24 @@
                     </div>
                     <div class="project-links">
                         <a href="https://orangeblackjack.netlify.app" target="_blank" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
+                            Live Demo <i class="fas fa-arrow-right"></i>
                         </a>
-                        <a href="https://github.com/sandyzyn/orange-blackjack" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> Code
+                        <a href="https://github.com/sandyzyn/orange-blackjack" target="_blank" class="project-link project-link--ghost">
+                            GitHub <i class="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Project 2: Pantry 2 Plate -->
                 <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <div class="project-category-badge web">Web</div>
+                    <div class="project-number">02</div>
+                    <div class="project-meta">
+                        <span class="project-type">Full Stack</span>
+                        <span class="project-date">Sep &mdash; Dec 2024</span>
                     </div>
                     <h3>Pantry 2 Plate</h3>
-                    <p class="project-date">
-                        <i class="far fa-calendar"></i> September 2024 - December 2024
-                    </p>
                     <p class="project-description">
-                        A recipe recommendation platform with 6000+ recipes. Users input pantry ingredients to discover recipes filtered by difficulty, 
-                        cooking time, and dietary preferences. Features recipe saving and tracking.
+                        A recipe recommendation platform with 6000+ recipes. Users input pantry ingredients to discover recipes
+                        filtered by difficulty, cooking time, and dietary preferences.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">React</span>
@@ -251,29 +228,24 @@
                     </div>
                     <div class="project-links">
                         <a href="https://pantry-2-plate.onrender.com" target="_blank" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
+                            Live Demo <i class="fas fa-arrow-right"></i>
                         </a>
-                        <a href="https://github.com/kaylaxu15/pantry_2_plate" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> Code
+                        <a href="https://github.com/kaylaxu15/pantry_2_plate" target="_blank" class="project-link project-link--ghost">
+                            GitHub <i class="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Project 3: Business Today Web App -->
                 <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-calendar-check"></i>
-                        </div>
-                        <div class="project-category-badge web">Web</div>
+                    <div class="project-number">03</div>
+                    <div class="project-meta">
+                        <span class="project-type">Web App</span>
+                        <span class="project-date">Feb 2025 &mdash; Present</span>
                     </div>
                     <h3>Business Today Conference App</h3>
-                    <p class="project-date">
-                        <i class="far fa-calendar"></i> February 2025 - Present
-                    </p>
                     <p class="project-description">
-                        A web application streamlining conference logistics with personalized schedules and attendance tracking. 
-                        The app provides each user with a customized schedule and helps manage conference attendance efficiently.
+                        A web application streamlining conference logistics with personalized schedules
+                        and attendance tracking for each participant.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">HTML/CSS</span>
@@ -283,111 +255,73 @@
                     </div>
                     <div class="project-links">
                         <a href="https://businesstodayic51.vercel.app/" target="_blank" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
+                            Live Demo <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
-                <!-- Project 4: COS 429 Final Project -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-camera"></i>
-                        </div>
-                        <div class="project-category-badge web">CV/ML</div>
-                    </div>
-                    <h3>Few-Shot Calorie-Aware Snack Detection</h3>
-                    <p class="project-date">
-                        <i class="far fa-calendar"></i> COS 429 &mdash; Fall 2025
-                    </p>
-                    <p class="project-description">
-                        A computer vision system for detecting and estimating calories of snack items using few-shot learning.
-                        The model identifies snacks from limited training examples and provides calorie-aware predictions.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Computer Vision</span>
-                        <span class="tech-tag">Few-Shot Learning</span>
-                        <span class="tech-tag">Deep Learning</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="projects/COS_429_Final.pdf" target="_blank" class="project-link">
-                            <i class="fas fa-file-pdf"></i> Paper
-                        </a>
-                    </div>
-                </div>
+
             </div>
         </section>
 
-        <!-- Poster Projects Section -->
+        <!-- Research Section -->
         <section id="posters">
             <div class="section-header">
-                <span class="section-number">04</span>
-                <h2>Research & Publications</h2>
-                <div class="section-line"></div>
+                <span class="section-label">04 / Research</span>
+                <h2>Research &<br><em>Publications</em></h2>
             </div>
             <div class="posters-grid">
-
                 <div class="poster-card">
-                    <div class="poster-preview">
-                        <div class="poster-icon-wrapper">
-                            <i class="fas fa-dice"></i>
+                    <div class="poster-accent"></div>
+                    <div class="poster-content">
+                        <span class="poster-type">CV / ML &mdash; COS 429</span>
+                        <h3>Few-Shot Calorie-Aware Snack Detection</h3>
+                        <p class="poster-date">Fall 2025</p>
+                        <p class="poster-description">A computer vision system for detecting and estimating calories of snack items using few-shot learning. Identifies snacks from limited training examples with calorie-aware predictions.</p>
+                        <div class="poster-links-multiple">
+                            <a href="projects/COS_429_Final.pdf" target="_blank" class="poster-link-small">Paper</a>
+                            <a href="https://github.com/sandyzyn/casd" target="_blank" class="poster-link-small">GitHub</a>
                         </div>
                     </div>
+                </div>
+
+                <div class="poster-card">
+                    <div class="poster-accent"></div>
                     <div class="poster-content">
+                        <span class="poster-type">Conference Poster</span>
                         <h3>ECE473 Conference Poster</h3>
-                        <p class="poster-date">
-                            <i class="far fa-calendar"></i> Spring 2025
-                        </p>
+                        <p class="poster-date">Spring 2025</p>
                         <p class="poster-description">Decentralized on-chain implementation of blackjack delivering a transparent and trustless gaming experience.</p>
                         <a href="projects/ECE473_ConferencePoster.pdf" target="_blank" class="poster-link">
-                            <i class="fas fa-file-pdf"></i> View Poster
+                            View Poster <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
 
                 <div class="poster-card">
-                    <div class="poster-preview">
-                        <div class="poster-icon-wrapper">
-                            <i class="fas fa-dna"></i>
-                        </div>
-                    </div>
+                    <div class="poster-accent"></div>
                     <div class="poster-content">
+                        <span class="poster-type">Research Paper</span>
                         <h3>CRISPR gRNA Design Analysis</h3>
-                        <p class="poster-date">
-                            <i class="far fa-calendar"></i> Fall 2024
-                        </p>
+                        <p class="poster-date">Fall 2024</p>
                         <p class="poster-description">Comparative analysis of gRNA design software tools for CRISPR applications targeting the orco gene in honey bees.</p>
                         <a href="projects/written_final_report.pdf" target="_blank" class="poster-link">
-                            <i class="fas fa-file-pdf"></i> View Paper
+                            View Paper <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
 
                 <div class="poster-card">
-                    <div class="poster-preview">
-                        <div class="poster-icon-wrapper">
-                            <i class="fas fa-flask"></i>
-                        </div>
-                    </div>
+                    <div class="poster-accent"></div>
                     <div class="poster-content">
+                        <span class="poster-type">Lab Research</span>
                         <h3>Beta-Lactamase Research</h3>
-                        <p class="poster-date">
-                            <i class="far fa-calendar"></i> 2021-2022
-                        </p>
+                        <p class="poster-date">2021 &mdash; 2022</p>
                         <p class="poster-description">Comprehensive research on Beta-Lactamase enzyme studies and antibiotic resistance mechanisms.</p>
                         <div class="poster-links-multiple">
-                            <a href="projects/Chomet_Zhang_Sandy.pptx.pdf" target="_blank" class="poster-link-small">
-                                <i class="fas fa-file-pdf"></i> Research
-                            </a>
-                            <a href="projects/Beta-Lactamase-Poster-10-11-21.pdf" target="_blank" class="poster-link-small">
-                                <i class="fas fa-file-pdf"></i> EMBL
-                            </a>
-                            <a href="projects/SheuliPoster-3-22.pdf" target="_blank" class="poster-link-small">
-                                <i class="fas fa-file-pdf"></i> ASM Pt 1
-                            </a>
-                            <a href="projects/Texas-ASM-Poster-final-11-3a-21.pdf" target="_blank" class="poster-link-small">
-                                <i class="fas fa-file-pdf"></i> ASM Pt 2
-                            </a>
+                            <a href="projects/Chomet_Zhang_Sandy.pptx.pdf" target="_blank" class="poster-link-small">Research</a>
+                            <a href="projects/Beta-Lactamase-Poster-10-11-21.pdf" target="_blank" class="poster-link-small">EMBL</a>
+                            <a href="projects/SheuliPoster-3-22.pdf" target="_blank" class="poster-link-small">ASM Pt 1</a>
+                            <a href="projects/Texas-ASM-Poster-final-11-3a-21.pdf" target="_blank" class="poster-link-small">ASM Pt 2</a>
                         </div>
                     </div>
                 </div>
@@ -397,38 +331,37 @@
         <!-- Contact Section -->
         <section id="contact">
             <div class="section-header">
-                <span class="section-number">05</span>
-                <h2>Let's Connect</h2>
-                <div class="section-line"></div>
+                <span class="section-label">05 / Connect</span>
+                <h2>Let's<br><em>Talk</em></h2>
             </div>
             <div class="contact-content">
                 <p class="contact-intro">
-                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                    Always open to discussing new projects, creative ideas, or opportunities.
                 </p>
                 <div class="contact-cards">
                     <a href="mailto:sandyzhang.zyn@gmail.com" class="contact-card">
-                        <div class="contact-card-icon email">
-                            <i class="fas fa-envelope"></i>
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-info">
+                            <h3>Email</h3>
+                            <p>sandyzhang.zyn@gmail.com</p>
                         </div>
-                        <h3>Email</h3>
-                        <p>sandyzhang.zyn@gmail.com</p>
-                        <span class="contact-cta">Send a message <i class="fas fa-arrow-right"></i></span>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/sandy-zhang-zyn/" target="_blank" class="contact-card">
-                        <div class="contact-card-icon linkedin">
-                            <i class="fab fa-linkedin-in"></i>
+                        <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="contact-info">
+                            <h3>LinkedIn</h3>
+                            <p>sandy-zhang-zyn</p>
                         </div>
-                        <h3>LinkedIn</h3>
-                        <p>sandy-zhang-zyn</p>
-                        <span class="contact-cta">Connect with me <i class="fas fa-arrow-right"></i></span>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
                     </a>
                     <a href="https://github.com/sandyzyn" target="_blank" class="contact-card">
-                        <div class="contact-card-icon github">
-                            <i class="fab fa-github"></i>
+                        <div class="contact-icon"><i class="fab fa-github"></i></div>
+                        <div class="contact-info">
+                            <h3>GitHub</h3>
+                            <p>sandyzyn</p>
                         </div>
-                        <h3>GitHub</h3>
-                        <p>sandyzyn</p>
-                        <span class="contact-cta">View my code <i class="fas fa-arrow-right"></i></span>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
                     </a>
                 </div>
             </div>
@@ -436,8 +369,59 @@
     </div>
 
     <footer>
-        <p>Designed & Built by Sandy Zhang</p>
-        <p class="footer-year">© 2025</p>
+        <div class="footer-content">
+            <p>Designed & Built by Sandy Zhang</p>
+            <p class="footer-year">&copy; 2025</p>
+        </div>
     </footer>
+
+    <script>
+        // Intersection Observer for scroll-triggered animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .poster-card, .contact-card, .skill-category, .education-card, .about-text, .skills-container, .section-header').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth active nav highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 200;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Header background on scroll
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
