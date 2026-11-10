@@ -1,0 +1,83 @@
+@import 'tailwindcss';
+
+/* Tokens: neutral zinc base, one accent (burnt orange, a nod to Princeton).
+   Shape rule: containers rounded-2xl, interactive elements full pill. */
+:root {
+  --bg: #fafafa;
+  --surface: #fefefe;
+  --surface-2: #f2f2f3;
+  --ink: #18181b;
+  --ink-2: #52525b;
+  --muted: #71717a;
+  --line: #e4e4e7;
+  --accent: #b84f08;
+  --accent-hover: #9a4206;
+  --accent-fg: #fafafa;
+  --accent-soft: rgb(184 79 8 / 0.07);
+  --shadow-tint: 24 24 27;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c0c0e;
+    --surface: #141417;
+    --surface-2: #1b1b1f;
+    --ink: #ededef;
+    --ink-2: #a1a1aa;
+    --muted: #8b8b94;
+    --line: #27272a;
+    --accent: #fb923c;
+    --accent-hover: #fdba74;
+    --accent-fg: #0c0c0e;
+    --accent-soft: rgb(251 146 60 / 0.09);
+    --shadow-tint: 0 0 0;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+
+  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono Variable', ui-monospace, monospace;
+
+  --shadow-soft: 0 1px 2px rgb(var(--shadow-tint) / 0.05), 0 12px 32px -8px rgb(var(--shadow-tint) / 0.1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-bg font-sans text-ink antialiased;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-fg);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
