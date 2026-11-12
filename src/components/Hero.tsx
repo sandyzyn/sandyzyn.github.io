@@ -1,12 +1,39 @@
+import { useLayoutEffect, useRef, useState, type RefObject } from 'react'
 import { motion } from 'motion/react'
 import { ArrowUpRightIcon } from '@phosphor-icons/react'
 import { profile } from '../content'
 import { BUNNY_DOTS, BUNNY_H, BUNNY_W } from './bunnyDots'
 
+/*
+  Keeps the bunny's track lined up with "Sandy Zhang." When the heading fits on one line the
+  track sits right above the name; when it wraps, the name is on line two, so the track moves
+  to the top of the heading (still name-width) instead of landing between the lines.
+*/
+function useNameTrack(heading: RefObject<HTMLElement | null>, name: RefObject<HTMLElement | null>) {
+  const [track, setTrack] = useState({ left: 0, width: 0 })
+  useLayoutEffect(() => {
+    const h = heading.current
+    const n = name.current
+    if (!h || !n) return
+    const measure = () => {
+      const hr = h.getBoundingClientRect()
+      const nr = n.getBoundingClientRect()
+      const oneLine = nr.top - hr.top < nr.height / 2
+      setTrack({ left: oneLine ? nr.left - hr.left : 0, width: nr.width })
+    }
+    measure()
+    const ro = new ResizeObserver(measure)
+    ro.observe(h)
+    document.fonts?.ready.then(measure)
+    return () => ro.disconnect()
+  }, [heading, name])
+  return track
+}
+
 /* Dot-matrix bunny that hops along the top of the name. Decorative only. */
-function Bunny() {
+function Bunny({ left, width }: { left: number; width: number }) {
   return (
-    <span aria-hidden className="pointer-events-none absolute inset-x-0 bottom-full block h-11">
+    <span aria-hidden style={{ left, width }} className="pointer-events-none absolute bottom-full block h-11">
       <span className="bunny-track block h-full w-full">
         <span className="bunny-face block h-11 w-11 origin-center">
           <span className="bunny-hop block h-11 w-11">
@@ -26,6 +53,9 @@ const item = {
 } as const
 
 export default function Hero() {
+  const headingRef = useRef<HTMLHeadingElement>(null)
+  const nameRef = useRef<HTMLSpanElement>(null)
+  const track = useNameTrack(headingRef, nameRef)
   return (
     <section id="top" className="mx-auto flex min-h-[100dvh] max-w-6xl items-center px-4 pb-16 pt-24 sm:px-8">
       <div className="grid w-full grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-8">
@@ -39,11 +69,15 @@ export default function Hero() {
             {profile.tagline}
           </motion.p>
           <motion.h1
+            ref={headingRef}
             variants={item}
             className="relative mb-6 w-fit text-5xl font-medium leading-[1.02] tracking-tighter text-balance sm:text-6xl lg:text-7xl"
           >
-            <Bunny />
-            Hi, I'm Sandy Zhang.
+            {track.width > 0 && <Bunny left={track.left} width={track.width} />}
+            Hi, I'm{' '}
+            <span ref={nameRef} className="inline-block">
+              Sandy Zhang.
+            </span>
           </motion.h1>
           <motion.p variants={item} className="mb-10 max-w-[34ch] text-lg leading-relaxed text-ink-2 md:text-xl">
             {profile.intro}
