@@ -4,12 +4,11 @@ import { profile } from '../content'
 import { BUNNY_DOTS, BUNNY_H, BUNNY_W } from './bunnyDots'
 
 /*
-  Dot-matrix bunny that sits on the top edge of the photo and hops along it.
-  Inset from both sides so it stays clear of the rounded corners. Decorative only.
+  Dot-matrix bunny that hops along the top of the tagline. Decorative only.
 */
 function Bunny() {
   return (
-    <span aria-hidden className="pointer-events-none absolute inset-x-4 bottom-full -mb-px block h-11 overflow-x-clip">
+    <span aria-hidden className="pointer-events-none absolute inset-x-0 bottom-full mb-1 block h-11 overflow-x-clip">
       <span className="bunny-track block h-full w-full">
         <span className="bunny-face block h-11 w-11 origin-center">
           <span className="bunny-hop block h-11 w-11">
@@ -30,7 +29,7 @@ const item = {
 
 export default function Hero() {
   return (
-    <section id="top" className="mx-auto flex min-h-[100dvh] max-w-6xl items-center px-4 pb-16 pt-32 sm:px-8 md:pt-24">
+    <section id="top" className="mx-auto flex min-h-[100dvh] max-w-6xl items-center px-4 pb-16 pt-24 sm:px-8">
       <div className="grid w-full grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-8">
         <motion.div
           className="order-2 md:order-1 md:col-span-7"
@@ -38,7 +37,8 @@ export default function Hero() {
           animate="show"
           variants={{ show: { transition: { staggerChildren: 0.08 } } }}
         >
-          <motion.p variants={item} className="mb-6 font-mono text-sm text-accent">
+          <motion.p variants={item} className="relative mb-6 mt-14 w-fit font-mono text-sm text-accent md:mt-0">
+            <Bunny />
             {profile.tagline}
           </motion.p>
           <motion.h1
@@ -74,9 +74,7 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: 'spring', stiffness: 80, damping: 20, delay: 0.1 }}
         >
-          {/* Wrapper is not clipped so the bunny can sit on the photo's top edge. */}
-          <div className="relative mr-auto w-full max-w-[220px] md:ml-auto md:mr-0 md:max-w-[400px]">
-            <Bunny />
+          <div className="mr-auto w-full max-w-[220px] md:ml-auto md:mr-0 md:max-w-[400px]">
             {/* 4:5 center crop also trims a UI artifact in the photo's bottom-right corner. */}
             <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl bg-surface-2 shadow-soft">
               <img
