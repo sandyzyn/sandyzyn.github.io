@@ -81,3 +81,31 @@
     }
   }
 }
+
+/*
+  Bunny hopping along the top of the hero name.
+  .bunny-track spans the name; translateX(100%) moves it one full name-width,
+  so the bunny goes right, turns around, and comes back. Hops run on their own short loop.
+*/
+@keyframes bunny-travel {
+  0%, 4% { transform: translateX(0); }
+  46%, 54% { transform: translateX(calc(100% - 2rem)); }
+  96%, 100% { transform: translateX(0); }
+}
+@keyframes bunny-face {
+  0%, 49.9% { transform: scaleX(1); }
+  50%, 99.9% { transform: scaleX(-1); }
+}
+@keyframes bunny-hop {
+  0%, 100% { transform: translateY(0) scale(1.06, 0.92); }
+  12% { transform: translateY(0) scale(1, 1); }
+  50% { transform: translateY(-11px) scale(0.96, 1.05); }
+  88% { transform: translateY(0) scale(1, 1); }
+}
+.bunny-track { animation: bunny-travel 14s ease-in-out infinite; }
+.bunny-face { animation: bunny-face 14s steps(1) infinite; }
+.bunny-hop { animation: bunny-hop 0.55s cubic-bezier(0.33, 0, 0.67, 1) infinite; transform-origin: 50% 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bunny-track, .bunny-face, .bunny-hop { animation: none; }
+}
