@@ -35,7 +35,7 @@ export default function Hero() {
           animate="show"
           variants={{ show: { transition: { staggerChildren: 0.08 } } }}
         >
-          <motion.p variants={item} className="mb-16 font-mono text-sm text-accent">
+          <motion.p variants={item} className="mb-14 font-mono text-sm text-accent">
             {profile.tagline}
           </motion.p>
           <motion.h1
